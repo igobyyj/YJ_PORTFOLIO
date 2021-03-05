@@ -1,0 +1,14 @@
+#beauty {
+  cursor: url("../../../styles//mouse_cursor_black.svg"), default;
+}
+
+.slick-prev {
+  &::before {
+    color: #000 !important;
+  }
+}
+.slick-next {
+  &::before {
+    color: #000 !important;
+  }
+}

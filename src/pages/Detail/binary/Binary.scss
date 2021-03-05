@@ -1,0 +1,14 @@
+#binary {
+  cursor: url("../../../styles//mouse_cursor_white.svg"), default;
+}
+
+.slick-prev {
+  &::before {
+    color: #fff !important;
+  }
+}
+.slick-next {
+  &::before {
+    color: #fff !important;
+  }
+}
