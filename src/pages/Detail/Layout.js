@@ -165,7 +165,7 @@ const IframeContainer = styled.div`
     }
 `;
 
-const Time = styled.div`
+const LargeScreenNav = styled.div`
     position: absolute;
     display: flex;
     justify-content: center;
@@ -174,29 +174,12 @@ const Time = styled.div`
     background-color: ${(props) => props.background};
     color: ${(props) => props.color};
     top: 30px;
+    left: 30px;
+    right: 0;
     width: 100px;
     height: 34px;
-    padding: 0;
-    font-size: 1.8vmin;
-
-    @media screen and (min-width: 250px) {
-        top: 17px;
-        right: 17px;
-        width: 46px;
-        height: 16px;
-        padding: 5px;
-        font-size: 10px;
-    }
-
-    @media screen and (min-width: 1200px) {
-        top: 30px;
-        left: 30px;
-        right: 0;
-        width: 100px;
-        height: 34px;
-        padding: 10px;
-        font-size: 20px;
-    }
+    padding: 10px;
+    font-size: 20px;
 `;
 
 const ScrollToTopButton = styled(ScrollToTop)`
@@ -320,7 +303,7 @@ class Layout extends Component {
                 id={this.props.id}
             >
                 {window.innerWidth > 1200 ? (
-                    <Time
+                    <LargeScreenNav
                         className="dropdown"
                         background={
                             this.props.background === "#000" ? "#fff" : "#000"
@@ -346,7 +329,7 @@ class Layout extends Component {
                             <Link to="/Beauty">Anthology: Beauty</Link>
                             <Link to="/Love">Poster: Love</Link>
                         </div>
-                    </Time>
+                    </LargeScreenNav>
                 ) : (
                     <MobileNav
                         background={
