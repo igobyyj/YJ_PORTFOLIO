@@ -20,23 +20,17 @@ const Wrapper = styled.div`
 const ItemContainer = styled.div`
     display: flex;
     align-items: center;
-    margin: ${(props) =>
-        props.margin ? props.margin : "70px 160px 30px 160px"};
     text-align: center;
 
-    @media screen and (min-width: 320px) {
-        &.carrot {
-            margin-top: 50px;
-        }
-
-        margin: 58px 25px 25px 25px;
+    &.carrot {
+        margin-top: 50px;
     }
+    margin: 58px 25px 25px 25px;
 
     @media screen and (min-width: 768px) {
         &.carrot {
             margin: 58px 0 30px 0;
         }
-
         margin: 58px 70px 30px;
     }
 
@@ -190,15 +184,13 @@ const ScrollToTopButton = styled(ScrollToTop)`
     background-color: ${(props) => props.backgroundColor};
     border-radius: 7px;
 
-    @media screen and (min-width: 320px) {
-        right: 27px;
-        bottom: 17px;
-        width: 25px;
-        height: 25px;
+    right: 27px;
+    bottom: 17px;
+    width: 25px;
+    height: 25px;
 
-        svg {
-            width: 12px;
-        }
+    svg {
+        width: 12px;
     }
 
     @media screen and (min-width: 1200px) {
@@ -225,10 +217,7 @@ const ContentWrapper = styled.div`
     border-left: none;
     border-right: none;
     font-family: "Alliance-Regular" !important;
-
-    @media screen and (min-width: 320px) {
-        margin: 0 25px;
-    }
+    margin: 0 25px;
 
     @media screen and (min-width: 1024px) {
         margin: 0px 70px 0px;
@@ -400,17 +389,19 @@ class Layout extends Component {
                         )}
                     </>
                 )}
-                <ScrollToTopButton
-                    smooth={true}
-                    backgroundColor={this.props.background}
-                    component={
-                        this.props.background === "#000" ? (
-                            <ArrowUpWhite alt="arrow up" />
-                        ) : (
-                            <ArrowUpBlack alt="arrow up" />
-                        )
-                    }
-                />
+                {window.innerWidth > 1200 && (
+                    <ScrollToTopButton
+                        smooth={true}
+                        backgroundColor={this.props.background}
+                        component={
+                            this.props.background === "#000" ? (
+                                <ArrowUpWhite alt="arrow up" />
+                            ) : (
+                                <ArrowUpBlack alt="arrow up" />
+                            )
+                        }
+                    />
+                )}
             </Wrapper>
         );
     }

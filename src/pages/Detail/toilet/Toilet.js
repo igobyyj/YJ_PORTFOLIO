@@ -20,7 +20,7 @@ class Toilet extends Component {
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-          ></iframe>
+          />
         }
       >
         <FirstContent>
