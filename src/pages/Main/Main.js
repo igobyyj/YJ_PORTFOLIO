@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import Nav from "../../components/Nav";
+import Nav from "../../components/DesktopNav";
 import MobileNav from "../../components/MobileNav";
 import "./Main.scss";
 

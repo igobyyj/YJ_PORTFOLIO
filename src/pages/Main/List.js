@@ -55,6 +55,8 @@ export default class List extends Component {
                 >
                     {this.state.date}
                 </MobileNav>
+                <Link to="/">Home</Link>
+                <br />
                 <Link to="/message">Video: Message</Link>
                 <br />
                 <Link to="/carrot">Book: Carrot</Link>

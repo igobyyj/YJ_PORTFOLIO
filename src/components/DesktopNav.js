@@ -87,12 +87,8 @@ class Nav extends Component {
         onMouseEnter={this.handleMouseHover}
         onMouseLeave={this.handleMouseHover}
       >
-        {/* 41°24'12.2"N 2°10'26.5"E */}
         {new Date().toLocaleTimeString("en-US", { hour12: false })}
-        {/* <button>0419</button> */}
-        {/* 0419 */}
         <div className="dropdown-content">
-          <Link to="/">Home</Link>
           <Link to="/message">Video: Message</Link>
           <Link to="/carrot">Book: Carrot</Link>
           <Link to="/binary">Poster: Binary</Link>
